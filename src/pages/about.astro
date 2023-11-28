@@ -6,7 +6,10 @@ const identity= {
 	occupation: 'Full Stak web développeur',
 	hobbies: ['musique','jouer la guitare', 'jouer le charango','voyager']
 }
-const skills = ['HTML','CSS','JavaScript','Astro']
+const skills = ['HTML','CSS','JavaScript','Astro'];
+const happy= true;
+const finished= false;
+const goal= 3;
 ---
 
 <html lang="fr">
@@ -54,6 +57,18 @@ const skills = ['HTML','CSS','JavaScript','Astro']
 										<li>{skill}</li>
 									)}
 								</ul>
+								<div class="div">
+									{happy && 
+										<p>Je suis heureux d'apprendre Astro !</p>
+									}
+									{finished && 
+										<p>J'ai terminé ce tutorial !</p>
+									}
+									{goal === 3 
+										? <p>Mon objectif est de terminé dans trois jours.</p>
+										: <p>Mon objectif n'est pas de trois jours.</p>
+									}
+								</div>
 							</div>
                         </div>
 					</section>
