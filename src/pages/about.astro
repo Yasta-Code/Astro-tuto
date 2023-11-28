@@ -1,5 +1,12 @@
 ---
 const pageTitle = "À propos de moi";
+const identity= {
+	firstName: 'Petros',
+	country: 'Belgium',
+	occupation: 'Full Stak web développeur',
+	hobbies: ['musique','jouer la guitare', 'jouer le charango','voyager']
+}
+const skills = ['HTML','CSS','JavaScript','Astro']
 ---
 
 <html lang="fr">
@@ -32,6 +39,22 @@ const pageTitle = "À propos de moi";
                                 <p>Je suis en train de travailler sur le tutorial d'introduction d'Astro. C'est la deuxième page de mon site web, et c'est la première que je construit moi-même.</p>
 								<p>C'est site se mettra à jour au fur et à mesure que je complète davantage du tutorial, alors revenez régulièrement et voyez comment se déroule mon apprentissage</p>
                             </div>
+							<div class="div">
+								<p>Voici quelques faits me concernant</p>
+								<ul>
+									<li>Je m'appelle {identity.firstName}</li>
+									<li>Je vis au {identity.country} et je travail en tant que {identity.occupation}</li>
+									{identity.hobbies.length >= 2 &&
+										<li>Deux de mes loisir sont: {identity.hobbies[0]} et {identity.hobbies[1]}</li>
+									}
+								</ul>
+								<p>Voici mes compétences: </p>
+								<ul>
+									{skills.map((skill) => 
+										<li>{skill}</li>
+									)}
+								</ul>
+							</div>
                         </div>
 					</section>
 				</main>
