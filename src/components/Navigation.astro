@@ -7,18 +7,13 @@ const links= [
 ]
 ---
 
-<nav class="navigation">
+<div class="nav-links">
     {links.map((link) =>
         <Links url={link.url}  page={link.page}/>
     )}
-</nav>
+</div>
 
 <!-- <a href="/">Accueil</a>
 <a href="/about/">Á propos de moi</a>
 <a href="/blog/">Blog</a> -->
-<style>
-    .navigation{
-        display: flex;
-        gap: 0.5rem;
-    }
-</style>
+<style></style>

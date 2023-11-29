@@ -1,5 +1,5 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
@@ -18,14 +18,11 @@ const pageTitle = "Page d’accueil";
 	<body>
 		<div class="container">
 			<div class="row">
-				<nav class="navigation">
-                    <Navigation />
-                </nav>
-				<header class="header">header</header>
+				<Header />
+				<h1>{pageTitle}</h1>
 				<main class="main">
 					<section class="section">
 						<div class="section-header">
-							<h1>{pageTitle}</h1>
 						</div>
 					</section>
 				</main>
