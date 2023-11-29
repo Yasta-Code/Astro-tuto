@@ -1,7 +1,25 @@
 ---
-const platform = "github";
-const username = "withastro";
+import Social from './Social.astro';
+const social = [
+    {platform: 'twitter', username: 'astrodotbuild', icon: 'bi-twitter'},
+    {platform: 'github', username: 'Yasta-Code/yastacode.github.io', icon: 'bi-github'},
+    {platform: 'youtube', username: 'channel/UCL900HTbza9nTCsRZl2GHjg', icon: 'bi-youtube'},
+]
 ---
+
 <footer class="footer">
-    <p>Apprenez-en plus sur mes projets sur <a href={`https://www.${platform}.com/${username}`}>{platform}</a> !</p>
+    {social.map((item) => 
+        <Social platform={item.platform} username={item.username} icon={item.icon}/>
+        )}
+    <!-- <Social platform="twitter" username="astrodotbuild" icon="bi-twitter"/>
+        <Social platform="github" username="withastro" icon="bi-github"/>
+        <Social platform="youtube" username="astrodotbuild" icon="bi-youtube"/> -->
 </footer>
+
+<style>
+    footer {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+</style>
