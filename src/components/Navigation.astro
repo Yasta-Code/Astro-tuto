@@ -1,7 +1,24 @@
 ---
-
+import Links from './Links.astro';
+const links= [
+    {url: '/', page: 'Accueil'},
+    {url: '/about/', page: 'À propos de moi'},
+    {url: '/blog/', page: 'Blog'},
+]
 ---
 
-<a href="/">Accueil</a>
+<nav class="navigation">
+    {links.map((link) =>
+        <Links url={link.url}  page={link.page}/>
+    )}
+</nav>
+
+<!-- <a href="/">Accueil</a>
 <a href="/about/">Á propos de moi</a>
-<a href="/blog/">Blog</a>
+<a href="/blog/">Blog</a> -->
+<style>
+    .navigation{
+        display: flex;
+        gap: 0.5rem;
+    }
+</style>

@@ -1,0 +1,17 @@
+---
+const {url, page}= Astro.props;
+---
+<a href={`${url}`} title={`Allez à la page ${page}`}>{page}</a>
+
+<style>
+    a{
+        background-color: #9e59c1;
+        padding: 0.5rem 1rem;
+        color: white;
+        text-decoration: none;
+        border-radius: 0.3rem;
+    }
+    a:hover{
+        background-color: #80429f;
+    }
+</style>
